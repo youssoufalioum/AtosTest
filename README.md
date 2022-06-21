@@ -1,5 +1,7 @@
 # AtosTest
  
+##Nom de la base de donnée: 
+"atostest"
 ## Comment générer le fichier jar:
 - ouvrir le projet dans un terminal;
 - Saisir la phrase "mvn clean install"
