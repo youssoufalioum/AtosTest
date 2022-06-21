@@ -11,9 +11,9 @@ __Nom de la base de donnée:__
 
 1. Pour enregistrer un utilisateur utilisez l'url : http://localhost:8080/atostest/api/saveUser dans Postman.
 
-__Avec pour body:__ 
+__Avec pour body le fichier JSON suivant:__ 
 
-__Ex:__
+__Example:__
 {
     "name":"Youssoufou",
     "birthdate":"1992-05-19",
