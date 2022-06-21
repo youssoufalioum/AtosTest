@@ -14,11 +14,23 @@ __Nom de la base de donnée:__
 __Avec pour body:__ 
 
 {
+
+
     "name":"Youssoufou",
+
+
     "birthdate":"1992-05-19",
-    "country":"Cameroun",
+
+
+    "country":"France",
+
+
     "phone_number":"",
+
+
     "gender":""
+
+
 }
 
 2. Pour afficher un utilisateur utilisez l'url : http://localhost:8080/atostest/api/getUserDetails/id dans Postman (id=1 par exemple).
