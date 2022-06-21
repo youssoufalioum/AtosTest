@@ -12,6 +12,7 @@
 	<artifactId>AtosTest</artifactId>
 	<version>1.0.0</version>
 	<name>AtosTest</name>
+	<packaging>jar</packaging>
 	<description>Projet test d&apos;Atos</description>
 	<properties>
 		<java.version>1.8</java.version>

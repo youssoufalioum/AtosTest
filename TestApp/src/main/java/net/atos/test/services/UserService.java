@@ -22,25 +22,22 @@ public class UserService {
 
 	@Autowired
 	private UserRepository userRepository;
-	private String message;
+	//private String message;
 	
 	public User saveUser(User user) {
-		Date getYearStDate=user.getBirthdate();
-		SimpleDateFormat dtf =new SimpleDateFormat("yyyy"); 
-		System.out.println("Année de naissance: "+dtf.format(getYearStDate));
-		LocalDateTime localDateTime = LocalDateTime.now();
-		System.out.println("Année en cours: "+localDateTime.getYear());
-		int age=(localDateTime.getYear()-Integer.parseInt(dtf.format(getYearStDate)));
-		if(age<18) {
-			System.out.println("Vous êtes mineur");
-			message="Vous etes mineur";
-		}else if (user.getCountry()!="France") {
-			System.out.println("Vous n'etes pas resident francais");
-			message="seul les residents francais peuvent créer un compte";
-		}else {
-			userRepository.save(user);
-			message="Enregistrer avec succes";
-		}
+		/*
+		 * Date getYearStDate=user.getBirthdate(); SimpleDateFormat dtf =new
+		 * SimpleDateFormat("yyyy");
+		 * System.out.println("Année de naissance: "+dtf.format(getYearStDate));
+		 * LocalDateTime localDateTime = LocalDateTime.now();
+		 * System.out.println("Année en cours: "+localDateTime.getYear()); int
+		 * age=(localDateTime.getYear()-Integer.parseInt(dtf.format(getYearStDate)));
+		 * if(age<18) { System.out.println("Vous êtes mineur");
+		 * message="Vous etes mineur"; }else if (user.getCountry()!="France") {
+		 * System.out.println("Vous n'etes pas resident francais");
+		 * message="seul les residents francais peuvent créer un compte"; }else {
+		 * userRepository.save(user); message="Enregistrer avec succes"; }
+		 */
 		return userRepository.save(user);
 	}
 	
