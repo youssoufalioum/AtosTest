@@ -13,6 +13,7 @@ __Nom de la base de donnée:__
 
 __Avec pour body:__ 
 
+__Ex:__
 {
     "name":"Youssoufou",
     "birthdate":"1992-05-19",
