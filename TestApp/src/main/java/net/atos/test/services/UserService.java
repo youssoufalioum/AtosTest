@@ -34,7 +34,7 @@ public class UserService {
 		if(age<18) {
 			System.out.println("Vous êtes mineur");
 			message="Vous etes mineur";
-		}else if (user.getCountry()!="france") {
+		}else if (user.getCountry()!="France") {
 			System.out.println("Vous n'etes pas resident francais");
 			message="seul les residents francais peuvent créer un compte";
 		}else {
@@ -46,9 +46,6 @@ public class UserService {
 	
 	public User getUserDetails(int id) {
 		User user=userRepository.findById(id).get();
-		/*
-		 * if(user==null) { throw new UserException("User Not Found"); }
-		 */
 		return user;
 	}
 }

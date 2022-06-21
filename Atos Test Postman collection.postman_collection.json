@@ -41,7 +41,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/atostest/api/getUserDetails?user_id=1",
+					"raw": "http://localhost:8080/atostest/api/getUserDetails/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -50,13 +50,8 @@
 					"path": [
 						"atostest",
 						"api",
-						"getUserDetails"
-					],
-					"query": [
-						{
-							"key": "user_id",
-							"value": "1"
-						}
+						"getUserDetails",
+						"1"
 					]
 				}
 			},
