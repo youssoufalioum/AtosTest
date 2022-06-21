@@ -16,7 +16,6 @@ __Avec pour body:__
 {
 
     "name":"Youssoufou",
-
     "birthdate":"1992-05-19",
 
     "country":"France",
