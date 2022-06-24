@@ -6,10 +6,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-
-import org.springframework.lang.NonNull;
+import javax.persistence.UniqueConstraint;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,16 +21,21 @@ import lombok.ToString;
 @Entity
 @Data @NoArgsConstructor @AllArgsConstructor
 @ToString
+@Table(uniqueConstraints={@UniqueConstraint(columnNames={"name","phoneNumber"})})
 public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer user_id;
+	@NotBlank(message = "Name is mandatory")
 	private String name;
+	@NotNull(message = "Birthdate is mandatory")
 	@Temporal(TemporalType.DATE)
 	private Date birthdate;
+	@NotBlank(message = "Country is mandatory")
 	private String country;
-	private String phone_number;
+	//@Column(unique = true)
+	private String phoneNumber;
 	private String gender;
 	
 	public User(Integer user_id) {

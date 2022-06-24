@@ -7,5 +7,5 @@ import net.atos.test.entities.User;
 
 @RepositoryRestResource
 public interface UserRepository extends JpaRepository<User, Integer> {
-
+	boolean existsByPhoneNumber(String phoneNumber);
 }
