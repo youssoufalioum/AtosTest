@@ -39,7 +39,7 @@ public class AtosTestWebServices {
 			return new ResponseEntity<>(userService.convertUserToDto(userCreated), HttpStatus.CREATED);
 
 		} catch (Exception e) {
-			return new ResponseEntity<>(new UserNotFoundException("Data Not saved"), HttpStatus.NOT_ACCEPTABLE);
+			return new ResponseEntity<>(e, HttpStatus.NOT_ACCEPTABLE);
 		}
 	}
 
